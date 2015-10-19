@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.collections.FXCollections?>
+
+<GridPane alignment="center" hgap="5" prefHeight="500.0" prefWidth="400.0" stylesheets="/sample/view/GameStyle.css" vgap="5" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.control.Controller">
+   <columnConstraints>
+      <ColumnConstraints maxWidth="97.0" minWidth="47.0" prefWidth="50.0" />
+      <ColumnConstraints maxWidth="67.0" minWidth="0.0" prefWidth="50.0" />
+      <ColumnConstraints maxWidth="71.0" minWidth="43.0" prefWidth="50.0" />
+      <ColumnConstraints maxWidth="156.0" minWidth="103.0" prefWidth="147.0" />
+      <ColumnConstraints maxWidth="44.0" minWidth="0.0" prefWidth="0.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints prefHeight="30" />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+       <RowConstraints />
+   </rowConstraints>
+   <children>
+       <Label fx:id="header" prefHeight="29.0" prefWidth="305.0" text="Welcome to our game!!!" textAlignment="CENTER" GridPane.columnSpan="4" GridPane.rowIndex="0" />
+       <Button fx:id="btn00" mnemonicParsing="false" onAction="#setSymbol" prefHeight="50.0" prefWidth="50.0" text="" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+       <Button fx:id="btn01" mnemonicParsing="false" onAction="#setSymbol" prefHeight="50.0" prefWidth="50.0" text="" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+       <Button fx:id="btn02" mnemonicParsing="false" onAction="#setSymbol" prefHeight="50.0" prefWidth="50.0" text="" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+
+
+       <Button fx:id="btn10" mnemonicParsing="false" onAction="#setSymbol" prefHeight="50.0" prefWidth="50.0" text="" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+       <Button fx:id="btn11" mnemonicParsing="false" onAction="#setSymbol" prefHeight="50.0" prefWidth="50.0" text="" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+       <Button fx:id="btn12" mnemonicParsing="false" onAction="#setSymbol" prefHeight="50.0" prefWidth="50.0" text="" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+
+       <Button fx:id="btn20" mnemonicParsing="false" onAction="#setSymbol" prefHeight="50.0" prefWidth="50.0" text="" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+       <Button fx:id="btn21" mnemonicParsing="false" onAction="#setSymbol" prefHeight="50.0" prefWidth="50.0" text="" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+       <Button fx:id="btn22" mnemonicParsing="false" onAction="#setSymbol" prefHeight="50.0" prefWidth="50.0" text="" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+
+
+       <Button fx:id="btnStart" mnemonicParsing="false" onAction="#startGame" prefHeight="30.0" prefWidth="285.0" text="сбросить счёт" GridPane.columnSpan="4" GridPane.rowIndex="1" />
+       <Button fx:id="btnClear" mnemonicParsing="false" onAction="#clearField" prefHeight="49.0" prefWidth="124.0" text="очистить поле" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+       <ComboBox fx:id="instruments" onAction="#selectInstruments" onMouseClicked="#setChoice" prefHeight="50.0" prefWidth="124.0" promptText="инструменты" GridPane.columnIndex="3" GridPane.rowIndex="2">
+           <items>
+               <FXCollections fx:factory="observableArrayList">
+                   <String fx:value="Крестики" />
+                   <String fx:value="Нолики" />
+               </FXCollections>
+           </items>
+       </ComboBox>
+       <Label fx:id="lblResult" prefHeight="20.0" prefWidth="150" text="Счёт: 0 : 0" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+   </children>
+</GridPane>
